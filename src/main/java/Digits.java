@@ -11,7 +11,7 @@ public class Digits
 		if (num == 0) digitList.add(0);
 		else {
 			for (int i = (int)Math.log10(num); i >= 0; i--)
-				digitList.add((int)((num/Math.pow(10, i)) % 10));
+				digitList.add((int)(num/Math.pow(10, i) % 10));
 		}
 	}
 
