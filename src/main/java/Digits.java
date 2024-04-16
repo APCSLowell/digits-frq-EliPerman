@@ -9,10 +9,9 @@ public class Digits
 	{
 		digitList = new ArrayList<Integer>();
 		if (num == 0) digitList.add(0);
-		else {
+		else
 			for (int i = (int)Math.log10(num); i >= 0; i--)
 				digitList.add((int)(num/Math.pow(10, i) % 10));
-		}
 	}
 
 	public boolean isStrictlyIncreasing()
