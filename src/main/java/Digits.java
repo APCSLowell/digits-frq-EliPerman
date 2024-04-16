@@ -7,8 +7,8 @@ public class Digits
 
 	public Digits(int num)
 	{
-		for (int i = 0; i <= Math.log10(num); i++)
-			digitList.add(num/Math.pow(10, i) % 10);
+		for (int i = (int)Math.log10(num); i >= 0; i--)
+			digitList.add((int)(num/Math.pow(10, i)) % 10);
 	}
 
 	public boolean isStrictlyIncreasing()
