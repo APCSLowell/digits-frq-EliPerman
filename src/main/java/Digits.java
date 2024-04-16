@@ -8,8 +8,11 @@ public class Digits
 	public Digits(int num)
 	{
 		digitList = new ArrayList<Integer>();
-		for (int i = (int)Math.log10(num); i >= 0; i--)
-			digitList.add((int)(num/Math.pow(10, i)) % 10);
+		if (num == 0) digitList.add(0);
+		else {
+			for (int i = (int)Math.log10(num); i >= 0; i--)
+				digitList.add((int)((num/Math.pow(10, i)) % 10));
+		}
 	}
 
 	public boolean isStrictlyIncreasing()
